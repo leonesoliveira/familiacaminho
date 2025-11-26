@@ -34,8 +34,8 @@ export function ScheduleSection() {
   return (
     <div className="space-y-12">
       <div className="text-center space-y-4">
-        <h2 className="text-3xl font-bold tracking-tight text-primary md:text-4xl">Agenda de Cultos e Eventos</h2>
-        <p className="text-lg max-w-3xl mx-auto text-muted-foreground">
+        <h2 className="font-headline text-3xl font-bold tracking-tight text-primary md:text-4xl">Agenda de Cultos e Eventos</h2>
+        <p className="text-lg max-w-3xl mx-auto text-muted-foreground font-bold">
           Participe de nossos encontros. Há sempre um lugar para você em nossa família.
         </p>
       </div>
@@ -48,19 +48,19 @@ export function ScheduleSection() {
                     {event.icon}
                 </div>
                 <div>
-                    <CardTitle className="text-xl">{event.title}</CardTitle>
-                    <CardDescription className="font-semibold text-accent">{event.details}</CardDescription>
+                    <CardTitle className="font-headline text-xl">{event.title}</CardTitle>
+                    <CardDescription className="font-semibold text-accent font-bold">{event.details}</CardDescription>
                 </div>
               </div>
             </CardHeader>
             <CardContent className="flex-grow">
-              <p className="text-muted-foreground">{event.description}</p>
+              <p className="text-muted-foreground font-bold">{event.description}</p>
             </CardContent>
           </Card>
         ))}
       </div>
       <div className="text-center mt-8">
-        <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+        <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold">
             Ver Agenda Completa
         </Button>
       </div>

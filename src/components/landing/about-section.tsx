@@ -23,8 +23,8 @@ export function AboutSection() {
   return (
     <div className="space-y-12">
       <div className="text-center space-y-4">
-        <h2 className="text-3xl font-bold tracking-tight text-primary md:text-4xl">Quem Somos</h2>
-        <p className="text-lg max-w-3xl mx-auto text-muted-foreground">
+        <h2 className="font-headline text-3xl font-bold tracking-tight text-primary md:text-4xl">Quem Somos</h2>
+        <p className="text-lg max-w-3xl mx-auto text-muted-foreground font-bold">
           Somos uma família unida pela fé, comprometida em trilhar um caminho de propósito e amor ao próximo. Um lugar onde todos são bem-vindos.
         </p>
       </div>
@@ -35,8 +35,8 @@ export function AboutSection() {
               <div className="bg-accent/10 p-4 rounded-full">
                 {item.icon}
               </div>
-              <CardTitle className="text-2xl text-primary">{item.title}</CardTitle>
-              <CardDescription className="text-base text-muted-foreground">{item.description}</CardDescription>
+              <CardTitle className="font-headline text-2xl text-primary">{item.title}</CardTitle>
+              <CardDescription className="text-base text-muted-foreground font-bold">{item.description}</CardDescription>
             </CardHeader>
           </Card>
         ))}

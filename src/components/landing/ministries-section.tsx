@@ -17,8 +17,8 @@ export function MinistriesSection() {
   return (
     <div className="space-y-12">
       <div className="text-center space-y-4">
-        <h2 className="text-3xl font-bold tracking-tight text-primary md:text-4xl">Nossos Ministérios</h2>
-        <p className="text-lg max-w-3xl mx-auto text-muted-foreground">
+        <h2 className="font-headline text-3xl font-bold tracking-tight text-primary md:text-4xl">Nossos Ministérios</h2>
+        <p className="text-lg max-w-3xl mx-auto text-muted-foreground font-bold">
           Encontre seu lugar para servir e crescer. Juntos, usamos nossos dons para edificar a igreja e abençoar o mundo.
         </p>
       </div>
@@ -40,7 +40,7 @@ export function MinistriesSection() {
                     />
                   )}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  <h3 className="absolute bottom-4 left-4 text-2xl font-bold text-white">
+                  <h3 className="font-headline absolute bottom-4 left-4 text-2xl font-bold text-white">
                     {ministry.name}
                   </h3>
                 </div>

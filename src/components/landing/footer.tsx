@@ -12,11 +12,11 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-primary text-primary-foreground">
+    <footer className="bg-primary text-primary-foreground font-bold">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
           <div className="flex flex-col items-center md:items-start space-y-4">
-            <Link href="/" className="flex items-center gap-2 text-xl font-bold">
+            <Link href="/" className="flex items-center gap-2 text-xl font-headline font-bold">
               <Cross className="h-6 w-6 text-accent" />
               <span>Família Caminho</span>
             </Link>
@@ -25,7 +25,7 @@ export function Footer() {
             </p>
           </div>
           <div className="md:mx-auto">
-            <h3 className="font-semibold tracking-wider uppercase text-accent">Links Rápidos</h3>
+            <h3 className="font-headline font-semibold tracking-wider uppercase text-accent">Links Rápidos</h3>
             <ul className="mt-4 space-y-2">
               {quickLinks.map(link => (
                 <li key={link.label}>
@@ -37,7 +37,7 @@ export function Footer() {
             </ul>
           </div>
           <div className="md:text-right">
-             <h3 className="font-semibold tracking-wider uppercase text-accent">Versículo</h3>
+             <h3 className="font-headline font-semibold tracking-wider uppercase text-accent">Versículo</h3>
              <p className="mt-4 text-sm italic text-primary-foreground/70">
                 &quot;Eu sou o caminho, a verdade e a vida. Ninguém vem ao Pai, a não ser por mim.&quot;
              </p>

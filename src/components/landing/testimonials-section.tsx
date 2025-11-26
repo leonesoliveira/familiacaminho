@@ -35,8 +35,8 @@ export function TestimonialsSection() {
   return (
     <div className="space-y-12">
       <div className="text-center space-y-4">
-        <h2 className="text-3xl font-bold tracking-tight text-primary md:text-4xl">Testemunhos que Edificam</h2>
-        <p className="text-lg max-w-3xl mx-auto text-muted-foreground">
+        <h2 className="font-headline text-3xl font-bold tracking-tight text-primary md:text-4xl">Testemunhos que Edificam</h2>
+        <p className="text-lg max-w-3xl mx-auto text-muted-foreground font-bold">
           Veja como Deus tem transformado vidas em nossa comunidade.
         </p>
       </div>
@@ -55,13 +55,13 @@ export function TestimonialsSection() {
               <div className="p-1">
                 <Card className="h-full">
                   <CardContent className="flex flex-col items-center justify-center p-6 text-center space-y-4">
-                    <p className="text-muted-foreground italic">&quot;{testimonial.quote}&quot;</p>
+                    <p className="text-muted-foreground italic font-bold">&quot;{testimonial.quote}&quot;</p>
                     <div className="flex items-center gap-4 pt-4">
                         <Avatar>
                             {image && <AvatarImage src={image.imageUrl} alt={testimonial.name} data-ai-hint={image.imageHint} />}
                             <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
                         </Avatar>
-                        <span className="font-semibold text-primary">{testimonial.name}</span>
+                        <span className="font-semibold text-primary font-bold">{testimonial.name}</span>
                     </div>
                   </CardContent>
                 </Card>

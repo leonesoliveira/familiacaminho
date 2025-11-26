@@ -62,8 +62,8 @@ export function PrayerRequestSection() {
   return (
     <div className="max-w-2xl mx-auto text-center">
       <div className="space-y-4 mb-8">
-        <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">Como Podemos Orar por Você?</h2>
-        <p className="text-lg text-primary-foreground/80">
+        <h2 className="font-headline text-3xl font-bold tracking-tight text-white md:text-4xl">Como Podemos Orar por Você?</h2>
+        <p className="text-lg text-primary-foreground/80 font-bold">
           Sua causa é nossa causa. Deixe seu pedido de oração e nossa equipe de intercessão estará orando por você.
         </p>
       </div>
@@ -74,9 +74,9 @@ export function PrayerRequestSection() {
             name="name"
             render={({ field }) => (
               <FormItem className="text-left">
-                <FormLabel className="text-primary-foreground/90">Seu Nome</FormLabel>
+                <FormLabel className="text-primary-foreground/90 font-bold">Seu Nome</FormLabel>
                 <FormControl>
-                  <Input placeholder="Digite seu nome" {...field} className="bg-background/10 text-white placeholder:text-white/60 border-white/40 focus-visible:ring-offset-primary" />
+                  <Input placeholder="Digite seu nome" {...field} className="bg-background/10 text-white placeholder:text-white/60 border-white/40 focus-visible:ring-offset-primary font-bold" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -87,15 +87,15 @@ export function PrayerRequestSection() {
             name="request"
             render={({ field }) => (
               <FormItem className="text-left">
-                <FormLabel className="text-primary-foreground/90">Pedido de Oração</FormLabel>
+                <FormLabel className="text-primary-foreground/90 font-bold">Pedido de Oração</FormLabel>
                 <FormControl>
-                  <Textarea placeholder="Descreva seu pedido de oração" rows={5} {...field} className="bg-background/10 text-white placeholder:text-white/60 border-white/40 focus-visible:ring-offset-primary" />
+                  <Textarea placeholder="Descreva seu pedido de oração" rows={5} {...field} className="bg-background/10 text-white placeholder:text-white/60 border-white/40 focus-visible:ring-offset-primary font-bold" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
-          <Button type="submit" size="lg" disabled={isPending} className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
+          <Button type="submit" size="lg" disabled={isPending} className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold">
             {isPending ? 'Enviando...' : 'Enviar Pedido de Oração'}
           </Button>
         </form>

@@ -32,20 +32,20 @@ export function Header() {
       }`}
     >
       <div className="container mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-2 text-xl font-bold text-primary">
+        <Link href="/" className="flex items-center gap-2 text-xl font-headline font-bold text-primary">
           <Cross className="h-6 w-6 text-accent" />
           <span>Família Caminho</span>
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
           {navItems.map((item) => (
-            <Link key={item.label} href={item.href} className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary">
+            <Link key={item.label} href={item.href} className="text-sm font-bold text-foreground/80 transition-colors hover:text-primary">
               {item.label}
             </Link>
           ))}
-          <Button asChild variant="ghost" className="hover:bg-accent/20">
+          <Button asChild variant="ghost" className="hover:bg-accent/20 font-bold">
             <Link href="#doacao">Contribuir</Link>
           </Button>
-          <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
+          <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold">
              <Link href="#localizacao">Junte-se a Nós</Link>
           </Button>
         </nav>
@@ -60,7 +60,7 @@ export function Header() {
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <div className="p-4">
                  <div className="flex items-center justify-between">
-                    <Link href="/" className="flex items-center gap-2 text-xl font-bold text-primary" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link href="/" className="flex items-center gap-2 text-xl font-headline font-bold text-primary" onClick={() => setIsMobileMenuOpen(false)}>
                         <Cross className="h-6 w-6 text-accent" />
                         <span>Família Caminho</span>
                     </Link>
@@ -71,15 +71,15 @@ export function Header() {
                       key={item.label}
                       href={item.href}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="text-lg font-medium text-foreground/80 transition-colors hover:text-primary"
+                      className="text-lg font-bold text-foreground/80 transition-colors hover:text-primary"
                     >
                       {item.label}
                     </Link>
                   ))}
-                  <Button asChild variant="outline" size="lg" className="mt-4" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Button asChild variant="outline" size="lg" className="mt-4 font-bold" onClick={() => setIsMobileMenuOpen(false)}>
                     <Link href="#doacao">Contribuir</Link>
                   </Button>
-                  <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold" onClick={() => setIsMobileMenuOpen(false)}>
                     <Link href="#localizacao">Junte-se a Nós</Link>
                   </Button>
                 </nav>
