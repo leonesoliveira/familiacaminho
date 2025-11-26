@@ -1,0 +1,93 @@
+"use client";
+
+import * as React from "react";
+import Link from "next/link";
+import { Cross, Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+
+const navItems = [
+  { href: "#quem-somos", label: "Quem Somos" },
+  { href: "#agenda", label: "Agenda" },
+  { href: "#ministerios", label: "Ministérios" },
+  { href: "#contato", label: "Contato" },
+];
+
+export function Header() {
+  const [isScrolled, setIsScrolled] = React.useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <header
+      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+        isScrolled ? "bg-background/80 shadow-md backdrop-blur-sm" : "bg-transparent"
+      }`}
+    >
+      <div className="container mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <Link href="/" className="flex items-center gap-2 text-xl font-bold text-primary">
+          <Cross className="h-6 w-6 text-accent" />
+          <span>Família Caminho</span>
+        </Link>
+        <nav className="hidden items-center gap-6 md:flex">
+          {navItems.map((item) => (
+            <Link key={item.label} href={item.href} className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary">
+              {item.label}
+            </Link>
+          ))}
+          <Button asChild variant="ghost" className="hover:bg-accent/20">
+            <Link href="#doacao">Contribuir</Link>
+          </Button>
+          <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
+             <Link href="#localizacao">Junte-se a Nós</Link>
+          </Button>
+        </nav>
+        <div className="md:hidden">
+          <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon">
+                <Menu className="h-6 w-6" />
+                <span className="sr-only">Abrir menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+              <div className="p-4">
+                 <div className="flex items-center justify-between">
+                    <Link href="/" className="flex items-center gap-2 text-xl font-bold text-primary" onClick={() => setIsMobileMenuOpen(false)}>
+                        <Cross className="h-6 w-6 text-accent" />
+                        <span>Família Caminho</span>
+                    </Link>
+                 </div>
+                <nav className="mt-8 flex flex-col gap-6">
+                  {navItems.map((item) => (
+                    <Link
+                      key={item.label}
+                      href={item.href}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="text-lg font-medium text-foreground/80 transition-colors hover:text-primary"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                  <Button asChild variant="outline" size="lg" className="mt-4" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link href="#doacao">Contribuir</Link>
+                  </Button>
+                  <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link href="#localizacao">Junte-se a Nós</Link>
+                  </Button>
+                </nav>
+              </div>
+            </SheetContent>
+          </Sheet>
+        </div>
+      </div>
+    </header>
+  );
+}

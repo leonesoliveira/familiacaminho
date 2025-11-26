@@ -1,3 +1,70 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "A family walking on a path towards a light.",
+      "imageUrl": "https://images.unsplash.com/photo-1648221350871-e3ae3c8d0f58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxmYWl0aCUyMGZhbWlseSUyMHBhdGh8ZW58MHx8fHwxNzY0MTY3MTUzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "faith family path"
+    },
+    {
+      "id": "ministry-infantil",
+      "description": "Children playing and learning together.",
+      "imageUrl": "https://images.unsplash.com/flagged/photo-1567116681178-c326fa4e2c8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjaGlsZHJlbiUyMHBsYXlpbmd8ZW58MHx8fHwxNzY0MTY3MTUzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "children playing"
+    },
+    {
+      "id": "ministry-louvor",
+      "description": "A church band leading worship.",
+      "imageUrl": "https://images.unsplash.com/photo-1745852738196-4dfed8cbd691?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjaG9pciUyMHNpbmdpbmd8ZW58MHx8fHwxNzY0MTY3MTUzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "choir singing"
+    },
+    {
+      "id": "ministry-jovens",
+      "description": "A group of young people laughing.",
+      "imageUrl": "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8eW91dGglMjBncm91cHxlbnwwfHx8fDE3NjQxMTEwMDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "youth group"
+    },
+    {
+      "id": "ministry-casais",
+      "description": "A happy couple holding hands.",
+      "imageUrl": "https://images.unsplash.com/photo-1541679368093-5c967ac6de11?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxoYXBweSUyMGNvdXBsZXxlbnwwfHx8fDE3NjQxMDY3NzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "happy couple"
+    },
+    {
+      "id": "ministry-social",
+      "description": "Volunteers distributing food.",
+      "imageUrl": "https://images.unsplash.com/photo-1760992003988-1f3dbd65fd60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx2b2x1bnRlZXJzJTIwaGVscGluZ3xlbnwwfHx8fDE3NjQxNjcxNTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "volunteers helping"
+    },
+    {
+      "id": "ministry-discipulado",
+      "description": "People studying the bible together.",
+      "imageUrl": "https://images.unsplash.com/photo-1581447109200-bf2769116351?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxiaWJsZSUyMHN0dWR5fGVufDB8fHx8MTc2NDEwOTQxN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "bible study"
+    },
+    {
+      "id": "testimonial-1",
+      "description": "A smiling person.",
+      "imageUrl": "https://images.unsplash.com/photo-1607529378676-a20456ee2f6b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwZXJzb24lMjBzbWlsaW5nfGVufDB8fHx8MTc2NDEyMzc4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person smiling"
+    },
+    {
+      "id": "testimonial-2",
+      "description": "Another smiling person.",
+      "imageUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwZXJzb24lMjBzbWlsaW5nfGVufDB8fHx8MTc2NDEyMzc4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person smiling"
+    },
+    {
+      "id": "testimonial-3",
+      "description": "A third smiling person.",
+      "imageUrl": "https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwZXJzb24lMjBzbWlsaW5nfGVufDB8fHx8MTc2NDEyMzc4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person smiling"
+    },
+    {
+      "id": "map-location",
+      "description": "A map showing a location.",
+      "imageUrl": "https://images.unsplash.com/photo-1446776899648-aa78eefe8ed0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjaXR5JTIwbWFwfGVufDB8fHx8MTc2NDA0OTMxNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "city map"
+    }
+  ]
 }
