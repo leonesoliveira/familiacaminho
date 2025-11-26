@@ -2,9 +2,10 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { Cross, Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { LogoIcon } from "@/components/icons/LogoIcon";
 
 const navItems = [
   { href: "#quem-somos", label: "Quem Somos" },
@@ -33,7 +34,7 @@ export function Header() {
     >
       <div className="container mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2 text-xl font-headline font-bold text-primary">
-          <Cross className="h-6 w-6 text-accent" />
+          <LogoIcon className="h-8 w-8 text-accent" />
           <span>Família Caminho</span>
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
@@ -61,7 +62,7 @@ export function Header() {
               <div className="p-4">
                  <div className="flex items-center justify-between">
                     <Link href="/" className="flex items-center gap-2 text-xl font-headline font-bold text-primary" onClick={() => setIsMobileMenuOpen(false)}>
-                        <Cross className="h-6 w-6 text-accent" />
+                        <LogoIcon className="h-8 w-8 text-accent" />
                         <span>Família Caminho</span>
                     </Link>
                  </div>

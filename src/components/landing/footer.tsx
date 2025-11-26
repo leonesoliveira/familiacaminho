@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Cross } from "lucide-react";
+import { LogoIcon } from "@/components/icons/LogoIcon";
 
 const quickLinks = [
   { href: "#quem-somos", label: "Quem Somos" },
@@ -17,7 +17,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
           <div className="flex flex-col items-center md:items-start space-y-4">
             <Link href="/" className="flex items-center gap-2 text-xl font-headline font-bold">
-              <Cross className="h-6 w-6 text-accent" />
+              <LogoIcon className="h-8 w-8 text-accent" />
               <span>Família Caminho</span>
             </Link>
             <p className="text-sm text-primary-foreground/70">
