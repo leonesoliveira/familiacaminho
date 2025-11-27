@@ -30,7 +30,7 @@ export function AboutSection() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {aboutItems.map((item, index) => (
-          <Card key={index} className="text-center shadow-lg hover:shadow-xl hover:-translate-y-2 transition-transform duration-300">
+          <Card key={index} className="text-center shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-500 ease-in-out">
             <CardHeader className="items-center space-y-4">
               <div className="bg-accent/10 p-4 rounded-full">
                 {item.icon}
