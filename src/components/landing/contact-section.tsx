@@ -56,7 +56,7 @@ export function ContactSection() {
       </div>
       <div className="text-center text-muted-foreground flex items-center justify-center gap-2 font-bold">
         <MapPin className="h-5 w-5"/>
-        <span>Rua da Fé, 123 - Bairro Esperança, Cidade de Deus</span>
+        <span>R. Clotildes Torres, 39 – Alto do Mateus, João Pessoa – PB</span>
       </div>
     </div>
   );
