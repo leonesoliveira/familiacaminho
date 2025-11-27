@@ -10,6 +10,7 @@ import { DonateSection } from '@/components/landing/donate-section';
 import { ContactSection } from '@/components/landing/contact-section';
 import { Footer } from '@/components/landing/footer';
 import { SectionWrapper } from '@/components/landing/section-wrapper';
+import { ScrollToTopButton } from '@/components/landing/scroll-to-top-button';
 
 
 export default function Home() {
@@ -44,6 +45,7 @@ export default function Home() {
         </SectionWrapper>
       </main>
       <Footer />
+      <ScrollToTopButton />
     </div>
   );
 }
