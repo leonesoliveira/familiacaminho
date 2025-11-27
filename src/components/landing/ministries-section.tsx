@@ -7,7 +7,7 @@ const ministries = [
   { id: 'ministry-louvor', name: 'Louvor e Adoração' },
   { id: 'ministry-jovens', name: 'Jovens' },
   { id: 'ministry-casais', name: 'Casais' },
-  { id: 'ministry-social', name: 'Ação Social' },
+  { id: 'ministry-social', name: 'Obra Diaconal' },
   { id: 'ministry-discipulado', name: 'Discipulado' },
 ];
 
