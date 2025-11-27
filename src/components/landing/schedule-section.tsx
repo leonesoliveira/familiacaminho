@@ -40,7 +40,7 @@ export function ScheduleSection() {
           <Card key={event.title} className="flex flex-col">
             <CardHeader>
                 <CardTitle className="font-headline text-xl">{event.title}</CardTitle>
-                <CardDescription className="font-semibold text-accent font-bold">{event.details}</CardDescription>
+                <CardDescription className="font-semibold font-bold text-muted-foreground">{event.details}</CardDescription>
             </CardHeader>
             <CardContent className="flex-grow">
               <p className="text-muted-foreground font-bold">{event.description}</p>
