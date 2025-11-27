@@ -1,6 +1,7 @@
 'use server';
 
 import { z } from 'zod';
+import { generateVideo } from '@/ai/flows/generate-video-flow';
 
 const prayerSchema = z.object({
   name: z.string().min(2, { message: 'O nome deve ter pelo menos 2 caracteres.' }),
@@ -36,4 +37,10 @@ export async function submitPrayerRequest(data: z.infer<typeof prayerSchema>): P
     console.error('Erro ao salvar pedido de oração:', error);
     return { message: 'Ocorreu um erro inesperado no servidor. Tente novamente mais tarde.' };
   }
+}
+
+
+export async function generateHeroVideo(): Promise<string> {
+  const videoResult = await generateVideo('A soft, heartwarming video of a family enjoying a quiet moment together, cinematic style, warm lighting');
+  return videoResult;
 }
