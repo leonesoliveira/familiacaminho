@@ -2,43 +2,31 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { generateHeroVideo } from '@/app/actions';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function HeroSection() {
   const [isMounted, setIsMounted] = useState(false);
-  const [videoUrl, setVideoUrl] = useState<string | null>(null);
+  const heroImage = PlaceHolderImages.find(p => p.id === 'hero-background');
 
   useEffect(() => {
     setIsMounted(true);
-    const fetchVideo = async () => {
-      try {
-        const url = await generateHeroVideo();
-        setVideoUrl(url);
-      } catch (error) {
-        console.error("Failed to generate hero video:", error);
-        // Fallback to an image if video fails?
-      }
-    };
-    fetchVideo();
   }, []);
 
   return (
     <section className="relative h-[85vh] min-h-[600px] w-full flex items-center justify-center text-center text-white overflow-hidden">
-      {videoUrl ? (
-        <video
-          src={videoUrl}
-          autoPlay
-          loop
-          muted
-          playsInline
+      {heroImage ? (
+        <Image
+          src={heroImage.imageUrl}
+          alt={heroImage.description}
+          fill
           className="absolute top-0 left-0 w-full h-full object-cover"
-          data-ai-hint="family video"
+          data-ai-hint={heroImage.imageHint}
+          priority
         />
       ) : (
-        <div className="absolute inset-0 bg-secondary flex items-center justify-center">
-            <p className="text-foreground/80">Gerando vídeo...</p>
-        </div>
+        <div className="absolute inset-0 bg-secondary" />
       )}
       <div className="absolute inset-0 bg-background/70 bg-gradient-to-t from-background/80 to-transparent" />
       
