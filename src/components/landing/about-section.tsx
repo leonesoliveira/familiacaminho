@@ -1,19 +1,15 @@
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Target, Eye, Heart } from "lucide-react";
 
 const aboutItems = [
   {
-    icon: <Target className="h-10 w-10 text-accent" />,
     title: "Nossa Missão",
     description: "Levar a mensagem de amor e esperança a todos, servindo à comunidade e glorificando a Deus através de nossas ações e palavras.",
   },
   {
-    icon: <Eye className="h-10 w-10 text-accent" />,
     title: "Nossa Visão",
     description: "Ser uma igreja relevante e acolhedora, que transforma vidas e impacta a sociedade, sendo um farol de fé e um refúgio para todos que buscam propósito.",
   },
   {
-    icon: <Heart className="h-10 w-10 text-accent" />,
     title: "Nossos Valores",
     description: "Fundamentados no amor, na fé, na família, na comunhão e no serviço ao próximo, buscamos viver os ensinamentos de Cristo em nosso dia a dia.",
   },
@@ -32,9 +28,6 @@ export function AboutSection() {
         {aboutItems.map((item, index) => (
           <Card key={index} className="text-center shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-500 ease-in-out">
             <CardHeader className="items-center space-y-4">
-              <div className="bg-accent/10 p-4 rounded-full">
-                {item.icon}
-              </div>
               <CardTitle className="font-headline text-2xl text-primary">{item.title}</CardTitle>
               <CardDescription className="text-base text-muted-foreground font-bold">{item.description}</CardDescription>
             </CardHeader>
