@@ -8,21 +8,17 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Eye, Target, Gem } from "lucide-react";
 
 const items = [
   {
-    icon: <Target className="h-10 w-10 text-accent" />,
     title: "Nossa Missão",
     description: "Levar a mensagem transformadora de Jesus a todos, servindo com amor, compaixão e graça, e equipando cada pessoa para viver seu propósito em Cristo.",
   },
   {
-    icon: <Eye className="h-10 w-10 text-accent" />,
     title: "Nossa Visão",
     description: "Ser uma igreja relevante e acolhedora, que impacta nossa cidade e o mundo, sendo reconhecida como um farol de esperança, fé e unidade.",
   },
   {
-    icon: <Gem className="h-10 w-10 text-accent" />,
     title: "Nossos Valores",
     description: "Adoração, Palavra, Comunhão, Serviço e Evangelismo. Estes pilares guiam cada passo que damos como corpo de Cristo, refletindo nosso compromisso com Deus e com o próximo.",
   },
@@ -50,7 +46,6 @@ export function MissionVisionValuesSection() {
               <div className="p-1 h-full">
                 <Card className="h-full flex flex-col items-center justify-center text-center bg-background/50">
                   <CardHeader className="items-center">
-                    {item.icon}
                     <CardTitle className="font-headline text-2xl text-card-foreground">{item.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
