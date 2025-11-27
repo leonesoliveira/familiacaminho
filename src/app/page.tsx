@@ -11,6 +11,7 @@ import { ContactSection } from '@/components/landing/contact-section';
 import { Footer } from '@/components/landing/footer';
 import { SectionWrapper } from '@/components/landing/section-wrapper';
 import { ScrollToTopButton } from '@/components/landing/scroll-to-top-button';
+import { NewsletterSection } from '@/components/landing/newsletter-section';
 
 
 export default function Home() {
@@ -42,6 +43,9 @@ export default function Home() {
         </SectionWrapper>
         <SectionWrapper id="contato" className="bg-secondary/50">
           <ContactSection />
+        </SectionWrapper>
+        <SectionWrapper id="newsletter">
+          <NewsletterSection />
         </SectionWrapper>
       </main>
       <Footer />
