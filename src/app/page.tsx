@@ -33,7 +33,7 @@ export default function Home() {
         <SectionWrapper id="localizacao">
           <LocationSection />
         </SectionWrapper>
-        <SectionWrapper id="oracao" className="bg-primary text-primary-foreground">
+        <SectionWrapper id="oracao" className="bg-card">
           <PrayerRequestSection />
         </SectionWrapper>
         <SectionWrapper id="doacao">
