@@ -5,25 +5,21 @@ import Link from "next/link";
 
 const events = [
   {
-    icon: <Church className="h-8 w-8 text-primary" />,
     title: "Culto de Domingo",
     details: "Domingo, 10h e 18h",
     description: "Um momento de louvor, adoração e Palavra para começar a semana abençoado.",
   },
   {
-    icon: <Users className="h-8 w-8 text-primary" />,
     title: "Culto da Família",
     details: "Quarta-feira, 20h",
     description: "Um encontro especial no meio da semana para fortalecer os laços familiares e a fé.",
   },
   {
-    icon: <Sparkles className="h-8 w-8 text-primary" />,
     title: "Grupos Pequenos",
     details: "Diversos dias e horários",
     description: "Conecte-se com outras pessoas em um ambiente de comunhão e estudo bíblico.",
   },
   {
-    icon: <CalendarDays className="h-8 w-8 text-primary" />,
     title: "Eventos Especiais",
     details: "Confira a programação",
     description: "Fique por dentro de conferências, workshops e celebrações especiais.",
@@ -43,15 +39,8 @@ export function ScheduleSection() {
         {events.map((event) => (
           <Card key={event.title} className="flex flex-col">
             <CardHeader>
-              <div className="flex items-center gap-4">
-                <div className="bg-primary/10 p-3 rounded-lg">
-                    {event.icon}
-                </div>
-                <div>
-                    <CardTitle className="font-headline text-xl">{event.title}</CardTitle>
-                    <CardDescription className="font-semibold text-accent font-bold">{event.details}</CardDescription>
-                </div>
-              </div>
+                <CardTitle className="font-headline text-xl">{event.title}</CardTitle>
+                <CardDescription className="font-semibold text-accent font-bold">{event.details}</CardDescription>
             </CardHeader>
             <CardContent className="flex-grow">
               <p className="text-muted-foreground font-bold">{event.description}</p>
