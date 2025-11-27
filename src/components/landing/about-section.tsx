@@ -12,7 +12,7 @@ export function AboutSection() {
       </blockquote>
       <div className="max-w-3xl mx-auto space-y-4 text-lg text-muted-foreground font-bold">
           <p>
-              Somos uma igreja que assumiu o compromisso de amar pessoas, anunciar o evangelho e viver Cristo. Queremos ser um farol que ilumina, apontando o Caminho e revelando um Lugar Seguro onde todos podem encontrar esperança, alegria e paz.
+              Movidos pela fé, nosso propósito é amar pessoas, proclamar o evangelho e viver os ensinamentos de Cristo. Queremos ser um farol que ilumina, apontando o Caminho e revelando um Lugar Seguro onde todos podem encontrar esperança, alegria e paz.
           </p>
           <p>
               Venha nos conhecer, traga sua família e amigos. Será um prazer receber vocês em nossa casa!
