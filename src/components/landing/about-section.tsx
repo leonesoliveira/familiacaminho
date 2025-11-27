@@ -1,38 +1,22 @@
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 
-const aboutItems = [
-  {
-    title: "Nossa Missão",
-    description: "Levar a mensagem de amor e esperança a todos, servindo à comunidade e glorificando a Deus através de nossas ações e palavras.",
-  },
-  {
-    title: "Nossa Visão",
-    description: "Ser uma igreja relevante e acolhedora, que transforma vidas e impacta a sociedade, sendo um farol de fé e um refúgio para todos que buscam propósito.",
-  },
-  {
-    title: "Nossos Valores",
-    description: "Fundamentados no amor, na fé, na família, na comunhão e no serviço ao próximo, buscamos viver os ensinamentos de Cristo em nosso dia a dia.",
-  },
-];
-
 export function AboutSection() {
   return (
-    <div className="space-y-12">
-      <div className="text-center space-y-4">
-        <h2 className="font-headline text-3xl font-bold tracking-tight text-primary md:text-4xl">Quem Somos</h2>
-        <p className="text-lg max-w-3xl mx-auto text-muted-foreground font-bold">
-          Somos uma família unida pela fé, comprometida em trilhar um caminho de propósito e amor ao próximo. Um lugar onde todos são bem-vindos.
+    <div className="space-y-6 text-center">
+      <h2 className="font-headline text-3xl font-bold tracking-tight text-primary md:text-4xl">Conheça a Família Caminho</h2>
+      <blockquote className="max-w-3xl mx-auto">
+        <p className="text-lg italic text-muted-foreground font-bold">
+          &quot;Disse-lhe Jesus: Eu sou o caminho, e a verdade e a vida; ninguém vem ao Pai, senão por mim.&quot;
         </p>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {aboutItems.map((item, index) => (
-          <Card key={index} className="text-center shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-500 ease-in-out">
-            <CardHeader className="items-center space-y-4">
-              <CardTitle className="font-headline text-2xl text-primary">{item.title}</CardTitle>
-              <CardDescription className="text-base text-muted-foreground font-bold">{item.description}</CardDescription>
-            </CardHeader>
-          </Card>
-        ))}
+        <footer className="mt-2 text-sm text-muted-foreground/80 font-bold">João 14:6</footer>
+      </blockquote>
+      <div className="max-w-3xl mx-auto space-y-4 text-lg text-muted-foreground font-bold">
+          <p>
+              Somos uma igreja que assumiu o compromisso de amar pessoas, anunciar o evangelho e viver Cristo. Queremos ser um farol que ilumina, apontando o Caminho e revelando um Lugar Seguro onde todos podem encontrar esperança, alegria e paz.
+          </p>
+          <p>
+              Venha nos conhecer, traga sua família e amigos. Será um prazer receber vocês em nossa casa!
+          </p>
       </div>
     </div>
   );
