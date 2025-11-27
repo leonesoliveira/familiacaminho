@@ -62,8 +62,8 @@ export function PrayerRequestSection() {
   return (
     <div className="max-w-2xl mx-auto text-center">
       <div className="space-y-4 mb-8">
-        <h2 className="font-headline text-3xl font-bold tracking-tight text-primary-foreground md:text-4xl">Como Podemos Orar por Você?</h2>
-        <p className="text-lg text-foreground/80 font-bold">
+        <h2 className="font-headline text-3xl font-bold tracking-tight text-card-foreground md:text-4xl">Como Podemos Orar por Você?</h2>
+        <p className="text-lg text-card-foreground/80 font-bold">
           Sua causa é nossa causa. Deixe seu pedido de oração e nossa equipe de intercessão estará orando por você.
         </p>
       </div>
@@ -74,7 +74,7 @@ export function PrayerRequestSection() {
             name="name"
             render={({ field }) => (
               <FormItem className="text-left">
-                <FormLabel className="text-foreground/90 font-bold">Seu Nome</FormLabel>
+                <FormLabel className="text-card-foreground/90 font-bold">Seu Nome</FormLabel>
                 <FormControl>
                   <Input placeholder="Digite seu nome" {...field} className="bg-background/80 text-foreground placeholder:text-foreground/60 border-border focus-visible:ring-offset-background font-bold" />
                 </FormControl>
@@ -87,7 +87,7 @@ export function PrayerRequestSection() {
             name="request"
             render={({ field }) => (
               <FormItem className="text-left">
-                <FormLabel className="text-foreground/90 font-bold">Pedido de Oração</FormLabel>
+                <FormLabel className="text-card-foreground/90 font-bold">Pedido de Oração</FormLabel>
                 <FormControl>
                   <Textarea placeholder="Descreva seu pedido de oração" rows={5} {...field} className="bg-background/80 text-foreground placeholder:text-foreground/60 border-border focus-visible:ring-offset-background font-bold" />
                 </FormControl>
