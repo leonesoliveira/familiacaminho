@@ -12,6 +12,7 @@ import { Footer } from '@/components/landing/footer';
 import { SectionWrapper } from '@/components/landing/section-wrapper';
 import { ScrollToTopButton } from '@/components/landing/scroll-to-top-button';
 import { NewsletterSection } from '@/components/landing/newsletter-section';
+import { MissionVisionValuesSection } from '@/components/landing/mission-vision-values-section';
 
 
 export default function Home() {
@@ -22,6 +23,9 @@ export default function Home() {
         <HeroSection />
         <SectionWrapper id="quem-somos">
           <AboutSection />
+        </SectionWrapper>
+        <SectionWrapper id="nossos-valores" className="bg-card">
+          <MissionVisionValuesSection />
         </SectionWrapper>
         <SectionWrapper id="agenda" className="bg-secondary/50">
           <ScheduleSection />
