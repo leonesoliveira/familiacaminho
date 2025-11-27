@@ -81,7 +81,8 @@ export function Header() {
                     <Link href="#doacao">Contribuir</Link>
                   </Button>
                   <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold" onClick={() => setIsMobileMenuOpen(false)}>
-                    <Link href="#localizacao">Junte-se a Nós</Link>                  </Button>
+                    <Link href="#localizacao">Junte-se a Nós</Link>
+                  </Button>
                 </nav>
               </div>
             </SheetContent>
