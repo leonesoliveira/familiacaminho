@@ -12,7 +12,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-primary text-primary-foreground font-bold">
+    <footer className="bg-background text-foreground font-bold">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
           <div className="flex flex-col items-center md:items-start space-y-4">
@@ -20,7 +20,7 @@ export function Footer() {
               <LogoIcon className="h-8 w-8 text-accent" />
               <span>Família Caminho</span>
             </Link>
-            <p className="text-sm text-primary-foreground/70">
+            <p className="text-sm text-foreground/70">
               Um lugar de amor, fé e propósito.
             </p>
           </div>
@@ -29,7 +29,7 @@ export function Footer() {
             <ul className="mt-4 space-y-2">
               {quickLinks.map(link => (
                 <li key={link.label}>
-                  <Link href={link.href} className="text-sm text-primary-foreground/70 hover:text-white transition-colors">
+                  <Link href={link.href} className="text-sm text-foreground/70 hover:text-white transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -38,13 +38,13 @@ export function Footer() {
           </div>
           <div className="md:text-right">
              <h3 className="font-headline font-semibold tracking-wider uppercase text-accent">Versículo</h3>
-             <p className="mt-4 text-sm italic text-primary-foreground/70">
+             <p className="mt-4 text-sm italic text-foreground/70">
                 &quot;Eu sou o caminho, a verdade e a vida. Ninguém vem ao Pai, a não ser por mim.&quot;
              </p>
-             <p className="mt-1 text-xs text-primary-foreground/50">João 14:6</p>
+             <p className="mt-1 text-xs text-foreground/50">João 14:6</p>
           </div>
         </div>
-        <div className="mt-12 border-t border-primary-foreground/10 pt-8 text-center text-sm text-primary-foreground/50">
+        <div className="mt-12 border-t border-foreground/10 pt-8 text-center text-sm text-foreground/50">
           <p>&copy; {currentYear} Igreja Família Caminho. Todos os direitos reservados.</p>
         </div>
       </div>
