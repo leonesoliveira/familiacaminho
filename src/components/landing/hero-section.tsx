@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { WordRotate } from '@/components/ui/word-rotate';
 import { AuroraText } from '@/components/ui/aurora-text';
-import { ShimmerButton } from '@/components/ui/shimmer-button';
+import { ShinyButton } from '@/components/ui/shiny-button';
 
 export function HeroSection() {
   const [isMounted, setIsMounted] = useState(false);
@@ -49,18 +49,14 @@ export function HeroSection() {
         </div>
         <div className={`flex flex-col sm:flex-row gap-4 mt-4 transition-opacity duration-1000 delay-500 ${isMounted ? 'opacity-100' : 'opacity-0'}`}>
           <Link href="#localizacao">
-             <ShimmerButton>
-                <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white">
-                  Junte-se a Nós
-                </span>
-              </ShimmerButton>
+             <ShinyButton>
+                Junte-se a Nós
+              </ShinyButton>
           </Link>
           <Link href="#agenda">
-             <ShimmerButton>
-                 <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white">
-                  Assistir Culto Online
-                </span>
-              </ShimmerButton>
+             <ShinyButton>
+                Assistir Culto Online
+              </ShinyButton>
           </Link>
         </div>
       </div>
