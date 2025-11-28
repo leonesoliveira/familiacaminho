@@ -1,3 +1,4 @@
+
 "use client";
 
 import { Button } from "@/components/ui/button";
@@ -41,7 +42,7 @@ export function DonateSection() {
                     Cada oferta, por menor que seja, faz uma grande diferença. Agradecemos sua generosidade e parceria.
                 </p>
                 <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold">
-                    <Link href="#">Contribuir Online</Link>
+                    <Link href="/doacao">Contribuir Online</Link>
                 </Button>
             </div>
             <div className="flex flex-col items-center justify-center space-y-6 rounded-lg bg-secondary/50 p-8">
