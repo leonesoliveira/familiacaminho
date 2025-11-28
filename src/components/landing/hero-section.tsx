@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { HyperText } from '@/components/ui/hyper-text';
+import { InteractiveHoverButton } from '@/components/ui/interactive-hover-button';
 
 export function HeroSection() {
   const [isMounted, setIsMounted] = useState(false);
@@ -45,12 +46,12 @@ export function HeroSection() {
           <p className="mt-2">Uma família para Deus, corpo para Cristo e um templo para o Espírito.</p>
         </div>
         <div className={`flex flex-col sm:flex-row gap-4 mt-4 transition-opacity duration-1000 delay-500 ${isMounted ? 'opacity-100' : 'opacity-0'}`}>
-          <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg transform hover:scale-105 transition-transform font-bold">
-            <Link href="#localizacao">Junte-se a Nós</Link>
-          </Button>
-          <Button asChild size="lg" variant="outline" className="bg-transparent border-accent text-accent hover:bg-accent hover:text-accent-foreground shadow-lg transform hover:scale-105 transition-transform font-bold">
-            <Link href="#agenda">Assistir Culto Online</Link>
-          </Button>
+          <Link href="#localizacao">
+              <InteractiveHoverButton>Junte-se a Nós</InteractiveHoverButton>
+          </Link>
+          <Link href="#agenda">
+              <InteractiveHoverButton>Assistir Culto Online</InteractiveHoverButton>
+          </Link>
         </div>
       </div>
     </section>
