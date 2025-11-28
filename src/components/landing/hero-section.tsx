@@ -6,7 +6,6 @@ import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { InteractiveHoverButton } from '@/components/ui/interactive-hover-button';
 import { WordRotate } from '@/components/ui/word-rotate';
-import { TypingAnimation } from '@/components/ui/typing-animation';
 
 export function HeroSection() {
   const [isMounted, setIsMounted] = useState(false);
@@ -33,11 +32,9 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-background/70 bg-gradient-to-t from-background/80 to-transparent" />
       
       <div className={`relative z-10 flex flex-col items-center gap-6 px-4 transition-all duration-1000 ease-out ${isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-        <TypingAnimation 
-          className="font-headline text-4xl font-extrabold tracking-tight md:text-6xl lg:text-7xl text-foreground"
-          loop={false}
-          words={["Família Caminho"]}
-        />
+        <h1 className="font-headline text-4xl font-extrabold tracking-tight md:text-6xl lg:text-7xl text-foreground">
+          Família Caminho
+        </h1>
         <div className={`text-lg md:text-xl lg:text-2xl max-w-3xl text-foreground/90 transition-opacity duration-1000 delay-300 font-bold ${isMounted ? 'opacity-100' : 'opacity-0'}`}>
           <div className="flex justify-center items-center">
             <p className="mr-2">Um Lugar de</p>
