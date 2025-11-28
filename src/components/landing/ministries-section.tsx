@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Card, CardContent } from "@/components/ui/card";
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ScrollVelocityContainer, ScrollVelocityRow } from '@/components/ui/scroll-based-velocity';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const ministries = [
   { id: 'ministry-infantil', name: 'Ministério Infantil' },
@@ -20,32 +21,32 @@ const secondRow = ministries.slice(3, 6);
 const MinistryCard = ({ id, name }: { id: string; name: string }) => {
   const image = PlaceHolderImages.find(img => img.id === id);
   return (
-    <div className="mx-4">
-      <Card className="overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 w-64">
-        <CardContent className="p-0">
-          <div className="relative h-80 w-full">
-            {image && (
-              <Image
-                src={image.imageUrl}
-                alt={image.description}
-                fill
-                className="object-cover transition-transform duration-300 group-hover:scale-105"
-                data-ai-hint={image.imageHint}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              />
-            )}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-            <h3 className="font-headline absolute bottom-4 left-4 text-xl font-bold text-white">
-              {name}
-            </h3>
-          </div>
-        </CardContent>
-      </Card>
-    </div>
+    <Card className="overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 w-56 md:w-60">
+      <CardContent className="p-0">
+        <div className="relative h-72 w-full">
+          {image && (
+            <Image
+              src={image.imageUrl}
+              alt={image.description}
+              fill
+              className="object-cover transition-transform duration-300 group-hover:scale-105"
+              data-ai-hint={image.imageHint}
+              sizes="(max-width: 768px) 50vw, 33vw"
+            />
+          )}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+          <h3 className="font-headline absolute bottom-4 left-4 text-lg font-bold text-white">
+            {name}
+          </h3>
+        </div>
+      </CardContent>
+    </Card>
   );
 };
 
 export function MinistriesSection() {
+  const isMobile = useIsMobile();
+
   return (
     <div className="space-y-12">
       <div className="text-center space-y-4">
@@ -55,22 +56,32 @@ export function MinistriesSection() {
         </p>
       </div>
 
-      <div className="relative flex w-full flex-col items-center justify-center overflow-hidden py-8">
-        <ScrollVelocityContainer>
-          <ScrollVelocityRow baseVelocity={-2} direction={-1} className="py-4">
-            {firstRow.map((ministry) => (
-              <MinistryCard key={ministry.id} {...ministry} />
+      {isMobile ? (
+         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {ministries.map((ministry) => (
+                <div key={ministry.id} className="mx-auto">
+                    <MinistryCard {...ministry} />
+                </div>
             ))}
-          </ScrollVelocityRow>
-          <ScrollVelocityRow baseVelocity={2} direction={1} className="py-4">
-            {secondRow.map((ministry) => (
-              <MinistryCard key={ministry.id} {...ministry} />
-            ))}
-          </ScrollVelocityRow>
-        </ScrollVelocityContainer>
-        <div className="from-background pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r"></div>
-        <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l"></div>
-      </div>
+        </div>
+      ) : (
+        <div className="relative flex w-full flex-col items-center justify-center overflow-hidden py-4">
+            <ScrollVelocityContainer>
+            <ScrollVelocityRow baseVelocity={-2} direction={-1} className="py-2">
+                {firstRow.map((ministry) => (
+                <div className="mx-2" key={ministry.id}><MinistryCard {...ministry} /></div>
+                ))}
+            </ScrollVelocityRow>
+            <ScrollVelocityRow baseVelocity={2} direction={1} className="py-2">
+                {secondRow.map((ministry) => (
+                <div className="mx-2" key={ministry.id}><MinistryCard {...ministry} /></div>
+                ))}
+            </ScrollVelocityRow>
+            </ScrollVelocityContainer>
+            <div className="from-background pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r"></div>
+            <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l"></div>
+        </div>
+      )}
     </div>
   );
 }
