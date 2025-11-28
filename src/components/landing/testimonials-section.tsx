@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils"
 import { Marquee } from "@/components/ui/marquee"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { useIsMobile } from "@/hooks/use-mobile";
 
 
 const testimonials = [
@@ -86,6 +87,8 @@ const TestimonialCard = ({
 }
 
 export function TestimonialsSection() {
+  const isMobile = useIsMobile();
+
   return (
     <div className="space-y-12">
       <div className="text-center space-y-4">
@@ -94,13 +97,13 @@ export function TestimonialsSection() {
           Veja como Deus tem transformado vidas em nossa comunidade.
         </p>
       </div>
-      <div className="relative flex h-[450px] w-full flex-row items-center justify-center overflow-hidden rounded-lg">
+      <div className="relative flex h-[450px] w-full flex-col md:flex-row items-center justify-center overflow-hidden rounded-lg">
         <Marquee pauseOnHover vertical className="[--duration:30s]">
           {firstRow.map((testimonial) => (
             <TestimonialCard key={testimonial.id} {...testimonial} />
           ))}
         </Marquee>
-        <Marquee reverse pauseOnHover vertical className="[--duration:30s]">
+        <Marquee reverse pauseOnHover vertical className={cn("[--duration:30s]", isMobile && "hidden")}>
           {secondRow.map((testimonial) => (
             <TestimonialCard key={testimonial.id} {...testimonial} />
           ))}
