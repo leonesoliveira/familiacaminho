@@ -8,10 +8,10 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/co
 import { LogoIcon } from "@/components/icons/LogoIcon";
 
 const navItems = [
-  { href: "#quem-somos", label: "Quem Somos" },
-  { href: "#agenda", label: "Agenda" },
-  { href: "#ministerios", label: "Ministérios" },
-  { href: "#contato", label: "Contato" },
+  { href: "/#quem-somos", label: "Quem Somos" },
+  { href: "/#agenda", label: "Agenda" },
+  { href: "/#ministerios", label: "Ministérios" },
+  { href: "/#contato", label: "Contato" },
 ];
 
 export function Header() {
@@ -44,10 +44,10 @@ export function Header() {
             </Link>
           ))}
           <Button asChild variant="ghost" className="hover:bg-accent/20 font-bold">
-            <Link href="#doacao">Contribuir</Link>
+            <Link href="/doacao">Contribuir</Link>
           </Button>
           <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold">
-             <Link href="#localizacao">Junte-se a Nós</Link>
+             <Link href="/#localizacao">Junte-se a Nós</Link>
           </Button>
         </nav>
         <div className="md:hidden">
@@ -81,10 +81,10 @@ export function Header() {
                     </Link>
                   ))}
                   <Button asChild variant="outline" size="lg" className="mt-4 font-bold" onClick={() => setIsMobileMenuOpen(false)}>
-                    <Link href="#doacao">Contribuir</Link>
+                    <Link href="/doacao">Contribuir</Link>
                   </Button>
                   <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold" onClick={() => setIsMobileMenuOpen(false)}>
-                    <Link href="#localizacao">Junte-se a Nós</Link>
+                    <Link href="/#localizacao">Junte-se a Nós</Link>
                   </Button>
                 </nav>
               </div>
