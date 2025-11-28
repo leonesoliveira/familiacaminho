@@ -7,6 +7,12 @@
       "imageHint": "faith family path"
     },
     {
+      "id": "about-us-image",
+      "description": "Open book on a table in a cozy environment.",
+      "imageUrl": "https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?q=80&w=1508&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "book open"
+    },
+    {
       "id": "ministry-infantil",
       "description": "Children playing and learning together.",
       "imageUrl": "https://images.unsplash.com/flagged/photo-1567116681178-c326fa4e2c8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjaGlsZHJlbiUyMHBsYXlpbmd8ZW58MHx8fHwxNzY0MTY3MTUzfDA&ixlib=rb-4.1.0&q=80&w=1080",
