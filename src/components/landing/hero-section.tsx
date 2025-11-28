@@ -36,9 +36,8 @@ export function HeroSection() {
         <TypingAnimation 
           className="font-headline text-4xl font-extrabold tracking-tight md:text-6xl lg:text-7xl text-foreground"
           loop={false}
-        >
-          Família Caminho
-        </TypingAnimation>
+          words={["Família Caminho"]}
+        />
         <div className={`text-lg md:text-xl lg:text-2xl max-w-3xl text-foreground/90 transition-opacity duration-1000 delay-300 font-bold ${isMounted ? 'opacity-100' : 'opacity-0'}`}>
           <div className="flex justify-center items-center">
             <p className="mr-2">Um Lugar de</p>
