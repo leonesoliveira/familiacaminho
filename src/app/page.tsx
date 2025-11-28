@@ -1,6 +1,7 @@
 import { Header } from '@/components/landing/header';
 import { HeroSection } from '@/components/landing/hero-section';
 import { AboutSection } from '@/components/landing/about-section';
+import { VideoSection } from '@/components/landing/video-section';
 import { ScheduleSection } from '@/components/landing/schedule-section';
 import { MinistriesSection } from '@/components/landing/ministries-section';
 import { TestimonialsSection } from '@/components/landing/testimonials-section';
@@ -21,7 +22,10 @@ export default function Home() {
       <main className="flex-grow">
         <HeroSection />
         <SectionWrapper id="quem-somos">
-          <AboutSection />
+          <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <AboutSection />
+            <VideoSection />
+          </div>
         </SectionWrapper>
         <SectionWrapper id="nossos-valores" className="bg-card">
           <MissionVisionValuesSection />
