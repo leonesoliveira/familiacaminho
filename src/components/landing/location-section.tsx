@@ -47,8 +47,7 @@ export function LocationSection() {
             <Clock className="h-8 w-8 text-accent mt-1 shrink-0" />
             <div>
                 <h3 className="font-headline text-xl font-semibold text-primary">Horários dos Cultos</h3>
-                <p className="text-muted-foreground font-bold">Domingos: 10h e 18h</p>
-                <p className="text-muted-foreground font-bold">Quartas-feiras: 20h</p>
+                <p className="text-muted-foreground font-bold">Domingos: 09:30h</p>
             </div>
           </div>
           <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground w-full sm:w-auto font-bold">

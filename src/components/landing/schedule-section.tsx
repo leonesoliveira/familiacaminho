@@ -6,13 +6,8 @@ import Link from "next/link";
 const events = [
   {
     title: "Culto de Domingo",
-    details: "Domingo, 10h e 18h",
+    details: "Domingo, 09:30h",
     description: "Um momento de louvor, adoração e Palavra para começar a semana abençoado.",
-  },
-  {
-    title: "Culto da Família",
-    details: "Quarta-feira, 20h",
-    description: "Um encontro especial no meio da semana para fortalecer os laços familiares e a fé.",
   },
   {
     title: "Grupos Pequenos",
@@ -35,7 +30,7 @@ export function ScheduleSection() {
           Participe de nossos encontros. Há sempre um lugar para você em nossa família.
         </p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {events.map((event) => (
           <Card key={event.title} className="flex flex-col">
             <CardHeader>
