@@ -3,10 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Clock, MapPin } from "lucide-react";
 
 export function LocationSection() {
-  const address = "R. Clotildes Torres, 39 – Alto do Mateus, João Pessoa – PB";
-  const googleMapsEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.697424699453!2d-34.90805368869153!3d-7.045058792942085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7acdd4610502181%3A0x4c208479e0034b7f!2sR.%20Clotildes%20Torres%2C%2039%20-%20Alto%20do%20Mateus%2C%20Jo%C3%A3o%20Pessoa%20-%20PB!5e0!3m2!1spt-BR!2sbr!4v1717804473344!5m2!1spt-BR!2sbr";
-  const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
-  const googleMapsDirectionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`;
+  const addressText = "R. Clotildes Torres, 39 – Alto do Mateus, João Pessoa – PB";
+  const mapAddress = "R. Cel. Joca Velho - Alto do Mateus, João Pessoa - PB, 58090-220";
+  const googleMapsEmbedUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.582875150937!2d-34.9126600249767!3d-7.05835939293112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ad2b044f59c87f%3A0x10b67d0254045585!2sR.%20Cel.%20Joca%20Velho%20-%20Alto%20do%20Mateus%2C%20Jo%C3%A3o%20Pessoa%20-%20PB%2C%2058090-220!5e0!3m2!1spt-BR!2sbr!4v1718811802932!5m2!1spt-BR!2sbr`;
+  const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapAddress)}`;
+  const googleMapsDirectionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(mapAddress)}`;
 
   return (
     <div className="space-y-12">
@@ -39,7 +40,7 @@ export function LocationSection() {
             <MapPin className="h-8 w-8 text-accent mt-1 shrink-0" />
             <div>
                 <h3 className="font-headline text-xl font-semibold text-primary">Endereço</h3>
-                <p className="text-muted-foreground font-bold">{address}</p>
+                <p className="text-muted-foreground font-bold">{addressText}</p>
             </div>
           </div>
           <div className="flex items-start gap-4">
