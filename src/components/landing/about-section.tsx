@@ -1,4 +1,5 @@
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function AboutSection() {
   return (
@@ -15,9 +16,12 @@ export function AboutSection() {
               Movidos pela fé, nosso propósito é amar pessoas, proclamar o evangelho e viver os ensinamentos de Cristo. Queremos ser um farol que ilumina, apontando o Caminho e revelando um Lugar Seguro onde todos podem encontrar esperança, alegria e paz.
           </p>
           <p>
-              Venha nos conhecer, traga sua família e amigos. Será um prazer receber vocês em nossa casa!
+              Os primeiros seguidores de Cristo eram conhecidos como "Seguidores do Caminho", pois acreditavam que Jesus é o único caminho para a salvação. Quer saber mais sobre essa história e o porquê do nosso nome?
           </p>
       </div>
+      <Button asChild size="lg" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground font-bold">
+        <Link href="/o-caminho">Saiba mais sobre nosso nome</Link>
+      </Button>
     </div>
   );
 }
