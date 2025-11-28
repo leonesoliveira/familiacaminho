@@ -1,3 +1,5 @@
+"use client";
+
 import Image from 'next/image';
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -8,6 +10,8 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import Autoplay from "embla-carousel-autoplay";
+import { useRef } from 'react';
 
 const ministries = [
   { id: 'ministry-infantil', name: 'Ministério Infantil' },
@@ -20,6 +24,9 @@ const ministries = [
 
 export function MinistriesSection() {
   const images = PlaceHolderImages.filter(p => ministries.some(m => m.id === p.id));
+  const plugin = useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  )
 
   return (
     <div className="space-y-12">
@@ -30,6 +37,9 @@ export function MinistriesSection() {
         </p>
       </div>
       <Carousel
+        plugins={[plugin.current]}
+        onMouseEnter={plugin.current.stop}
+        onMouseLeave={plugin.current.reset}
         opts={{
           align: "start",
           loop: true,
