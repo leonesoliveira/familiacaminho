@@ -5,7 +5,6 @@ import { ScheduleSection } from '@/components/landing/schedule-section';
 import { MinistriesSection } from '@/components/landing/ministries-section';
 import { TestimonialsSection } from '@/components/landing/testimonials-section';
 import { LocationSection } from '@/components/landing/location-section';
-import { PrayerRequestSection } from '@/components/landing/prayer-request-section';
 import { DonateSection } from '@/components/landing/donate-section';
 import { ContactSection } from '@/components/landing/contact-section';
 import { Footer } from '@/components/landing/footer';
@@ -39,13 +38,10 @@ export default function Home() {
         <SectionWrapper id="localizacao">
           <LocationSection />
         </SectionWrapper>
-        <SectionWrapper id="oracao" className="bg-card">
-          <PrayerRequestSection />
-        </SectionWrapper>
         <SectionWrapper id="doacao">
           <DonateSection />
         </SectionWrapper>
-        <SectionWrapper id="contato" className="bg-secondary/50">
+        <SectionWrapper id="contato" className="bg-card">
           <ContactSection />
         </SectionWrapper>
         <SectionWrapper id="newsletter">
