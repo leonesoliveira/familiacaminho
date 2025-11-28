@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { InteractiveHoverButton } from "../ui/interactive-hover-button";
+import { ShinyButton } from "@/components/ui/shiny-button";
 
 export function AboutSection() {
   return (
@@ -20,7 +20,7 @@ export function AboutSection() {
           </p>
       </div>
       <Link href="/o-caminho">
-        <InteractiveHoverButton>Saiba mais sobre nosso nome</InteractiveHoverButton>
+        <ShinyButton>Saiba mais sobre nosso nome</ShinyButton>
       </Link>
     </div>
   );
