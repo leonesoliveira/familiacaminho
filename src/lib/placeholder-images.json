@@ -51,19 +51,37 @@
     {
       "id": "testimonial-1",
       "description": "A smiling person.",
-      "imageUrl": "https://images.unsplash.com/photo-1607529378676-a20456ee2f6b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwZXJzb24lMjBzbWlsaW5nfGVufDB8fHx8MTc2NDEyMzc4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://avatar.vercel.sh/ana_silva",
       "imageHint": "person smiling"
     },
     {
       "id": "testimonial-2",
       "description": "Another smiling person.",
-      "imageUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwZXJzb24lMjBzbWlsaW5nfGVufDB8fHx8MTc2NDEyMzc4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://avatar.vercel.sh/carlos_pereira",
       "imageHint": "person smiling"
     },
     {
       "id": "testimonial-3",
       "description": "A third smiling person.",
-      "imageUrl": "https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwZXJzb24lMjBzbWlsaW5nfGVufDB8fHx8MTc2NDEyMzc4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://avatar.vercel.sh/mariana_costa",
+      "imageHint": "person smiling"
+    },
+    {
+      "id": "testimonial-4",
+      "description": "A fourth smiling person.",
+      "imageUrl": "https://avatar.vercel.sh/jose_santos",
+      "imageHint": "person smiling"
+    },
+    {
+      "id": "testimonial-5",
+      "description": "A fifth smiling person.",
+      "imageUrl": "https://avatar.vercel.sh/fernanda_lima",
+      "imageHint": "person smiling"
+    },
+    {
+      "id": "testimonial-6",
+      "description": "A sixth smiling person.",
+      "imageUrl": "https://avatar.vercel.sh/paulo_rocha",
       "imageHint": "person smiling"
     },
     {
