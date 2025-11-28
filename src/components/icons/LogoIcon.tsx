@@ -1,12 +1,5 @@
-import * as React from "react";
+import { ReactComponent as LogoSVG } from "./logo.svg";
 
 export const LogoIcon = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="currentColor"
-    {...props}
-  >
-    <path d="M4.26,2.22c-1.12,0-2.04,0.91-2.04,2.04v15.48c0,1.12,0.91,2.04,2.04,2.04h15.48c1.12,0,2.04-0.91,2.04-2.04V4.26c0-1.12-0.91-2.04-2.04-2.04H4.26z M18.17,17.43c-0.63,0.63-1.48,0.96-2.39,0.96h-7.56c-1.87,0-3.39-1.52-3.39-3.39V7.44c0-0.5,0.4-0.9,0.9-0.9s0.9,0.4,0.9,0.9v7.56c0,0.88,0.71,1.59,1.59,1.59h7.56c0.5,0,0.9,0.4,0.9,0.9S18.67,17.43,18.17,17.43z" />
-  </svg>
+  <LogoSVG {...props} />
 );
