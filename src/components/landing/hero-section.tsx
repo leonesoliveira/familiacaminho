@@ -34,7 +34,7 @@ export function HeroSection() {
       
       <div className={`relative z-10 flex flex-col items-center gap-6 px-4 transition-all duration-1000 ease-out ${isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <h1 className="font-headline text-4xl font-extrabold tracking-tight md:text-6xl lg:text-7xl text-foreground">
-           Família <AuroraText colors={["#19376D", "#576CBC", "#A5D7E8", "#38bdf8"]}>Caminho</AuroraText>
+           Família <AuroraText colors={["#1DE7D6", "#A5D7E8", "#1DE7D6"]}>Caminho</AuroraText>
         </h1>
         
         <div className={`text-lg md:text-xl lg:text-2xl max-w-3xl text-foreground/90 transition-opacity duration-1000 delay-300 font-bold ${isMounted ? 'opacity-100' : 'opacity-0'}`}>
