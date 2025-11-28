@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Copy } from "lucide-react";
+import { Copy, ChevronDown } from "lucide-react";
 import Link from "next/link";
 import {
     Tooltip,
@@ -9,6 +9,11 @@ import {
     TooltipProvider,
     TooltipTrigger,
 } from "@/components/ui/tooltip"
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible"
 import { useToast } from "@/hooks/use-toast";
 
 
@@ -70,13 +75,18 @@ export function DonateSection() {
                                 </TooltipProvider>
                             </div>
                         </div>
-                        <div className="border-t border-border pt-4">
-                            <h4 className="font-bold text-primary/90 text-sm">Dados Bancários</h4>
-                            <p className="text-primary mt-1 font-bold">Banco Exemplo S.A. (001)</p>
-                            <p className="text-primary mt-1 font-bold">Agência: 0001</p>
-                            <p className="text-primary mt-1 font-bold">Conta Corrente: 12345-6</p>
-                            <p className="text-primary mt-1 font-bold">CNPJ: 00.000.000/0001-00</p>
-                        </div>
+                        <Collapsible className="border-t border-border pt-4">
+                            <CollapsibleTrigger className="flex justify-between items-center w-full group">
+                               <h4 className="font-bold text-primary/90 text-sm">Dados Bancários</h4>
+                               <ChevronDown className="h-4 w-4 transition-transform group-data-[state=open]:rotate-180" />
+                            </CollapsibleTrigger>
+                            <CollapsibleContent className="space-y-1 pt-2 text-left">
+                                <p className="text-primary mt-1 font-bold">Banco Exemplo S.A. (001)</p>
+                                <p className="text-primary mt-1 font-bold">Agência: 0001</p>
+                                <p className="text-primary mt-1 font-bold">Conta Corrente: 12345-6</p>
+                                <p className="text-primary mt-1 font-bold">CNPJ: 00.000.000/0001-00</p>
+                            </CollapsibleContent>
+                        </Collapsible>
                     </div>
                 </div>
             </div>
