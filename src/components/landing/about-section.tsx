@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { InteractiveHoverButton } from "../ui/interactive-hover-button";
 
 export function AboutSection() {
   return (
@@ -19,9 +19,9 @@ export function AboutSection() {
               Os primeiros seguidores de Cristo eram conhecidos como "Seguidores do Caminho", pois acreditavam que Jesus é o único caminho para a salvação. Quer saber mais sobre essa história e o porquê do nosso nome?
           </p>
       </div>
-      <Button asChild size="lg" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground font-bold">
-        <Link href="/o-caminho">Saiba mais sobre nosso nome</Link>
-      </Button>
+      <Link href="/o-caminho">
+        <InteractiveHoverButton>Saiba mais sobre nosso nome</InteractiveHoverButton>
+      </Link>
     </div>
   );
 }

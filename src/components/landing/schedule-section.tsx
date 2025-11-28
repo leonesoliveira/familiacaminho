@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { CalendarDays, Church, Users, Sparkles } from "lucide-react";
+import { Link as LinkIcon, CalendarDays, Church, Users, Sparkles } from "lucide-react";
 import Link from "next/link";
+import { InteractiveHoverButton } from "../ui/interactive-hover-button";
 
 const events = [
   {
@@ -44,9 +44,9 @@ export function ScheduleSection() {
         ))}
       </div>
       <div className="text-center mt-8">
-        <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold">
-            Ver Agenda Completa
-        </Button>
+        <Link href="#">
+          <InteractiveHoverButton>Ver Agenda Completa</InteractiveHoverButton>
+        </Link>
       </div>
     </div>
   );
