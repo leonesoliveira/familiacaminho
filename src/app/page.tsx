@@ -27,13 +27,13 @@ export default function Home() {
         <SectionWrapper id="quem-somos">
           <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <AboutSection />
-            <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-lg">
+            <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-lg group">
                 {aboutImage && (
                     <Image
                         src={aboutImage.imageUrl}
                         alt={aboutImage.description}
                         fill
-                        className="object-cover"
+                        className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
                         data-ai-hint={aboutImage.imageHint}
                         sizes="(max-width: 768px) 100vw, 50vw"
                     />
