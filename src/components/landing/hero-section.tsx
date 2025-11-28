@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { HyperText } from '@/components/ui/hyper-text';
 
 export function HeroSection() {
   const [isMounted, setIsMounted] = useState(false);
@@ -31,9 +32,14 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-background/70 bg-gradient-to-t from-background/80 to-transparent" />
       
       <div className={`relative z-10 flex flex-col items-center gap-6 px-4 transition-all duration-1000 ease-out ${isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-        <h1 className="font-headline text-4xl font-extrabold tracking-tight md:text-6xl lg:text-7xl text-foreground">
+        <HyperText 
+          as="h1" 
+          className="font-headline text-4xl font-extrabold tracking-tight md:text-6xl lg:text-7xl text-foreground"
+          startOnView={true}
+          animateOnHover={true}
+        >
           Família Caminho
-        </h1>
+        </HyperText>
         <div className={`text-lg md:text-xl lg:text-2xl max-w-3xl text-foreground/90 transition-opacity duration-1000 delay-300 font-bold ${isMounted ? 'opacity-100' : 'opacity-0'}`}>
           <p>Um Lugar de Amor, Fé e Propósito</p>
           <p className="mt-2">Uma família para Deus, corpo para Cristo e um templo para o Espírito.</p>
