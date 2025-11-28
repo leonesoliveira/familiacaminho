@@ -2,10 +2,10 @@ import Link from "next/link";
 import { LogoIcon } from "@/components/icons/LogoIcon";
 
 const quickLinks = [
-  { href: "#quem-somos", label: "Quem Somos" },
-  { href: "#agenda", label: "Agenda" },
-  { href: "#ministerios", label: "Ministérios" },
-  { href: "#contato", label: "Contato" },
+  { href: "/#quem-somos", label: "Quem Somos" },
+  { href: "/#agenda", label: "Agenda" },
+  { href: "/#ministerios", label: "Ministérios" },
+  { href: "/#contato", label: "Contato" },
 ];
 
 export function Footer() {
@@ -45,7 +45,16 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-12 border-t border-foreground/10 pt-8 text-center text-sm text-foreground/50">
-          <p>&copy; {currentYear} Igreja Família Caminho. Todos os direitos reservados.</p>
+          <p className="mb-2">&copy; {currentYear} Igreja Família Caminho. Todos os direitos reservados.</p>
+          <div className="flex justify-center gap-4">
+             <Link href="/politica-de-privacidade" className="hover:text-primary transition-colors">
+                Política de Privacidade
+             </Link>
+             <span>|</span>
+             <Link href="/termos-de-uso" className="hover:text-primary transition-colors">
+                Termos de Uso
+             </Link>
+          </div>
         </div>
       </div>
     </footer>
