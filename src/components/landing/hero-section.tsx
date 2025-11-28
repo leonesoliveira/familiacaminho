@@ -4,9 +4,9 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { InteractiveHoverButton } from '@/components/ui/interactive-hover-button';
 import { WordRotate } from '@/components/ui/word-rotate';
 import { AuroraText } from '@/components/ui/aurora-text';
+import { ShimmerButton } from '@/components/ui/shimmer-button';
 
 export function HeroSection() {
   const [isMounted, setIsMounted] = useState(false);
@@ -49,10 +49,18 @@ export function HeroSection() {
         </div>
         <div className={`flex flex-col sm:flex-row gap-4 mt-4 transition-opacity duration-1000 delay-500 ${isMounted ? 'opacity-100' : 'opacity-0'}`}>
           <Link href="#localizacao">
-              <InteractiveHoverButton>Junte-se a Nós</InteractiveHoverButton>
+             <ShimmerButton>
+                <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white">
+                  Junte-se a Nós
+                </span>
+              </ShimmerButton>
           </Link>
           <Link href="#agenda">
-              <InteractiveHoverButton>Assistir Culto Online</InteractiveHoverButton>
+             <ShimmerButton>
+                 <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white">
+                  Assistir Culto Online
+                </span>
+              </ShimmerButton>
           </Link>
         </div>
       </div>
