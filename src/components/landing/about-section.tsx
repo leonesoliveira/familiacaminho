@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { ShinyButton } from "@/components/ui/shiny-button";
 
 export function AboutSection() {
   return (
@@ -16,12 +15,9 @@ export function AboutSection() {
               Movidos pela fé, nosso propósito é amar pessoas, proclamar o evangelho e viver os ensinamentos de Cristo. Queremos ser um farol que ilumina, apontando o Caminho e revelando um Lugar Seguro onde todos podem encontrar esperança, alegria e paz.
           </p>
           <p>
-              Os primeiros seguidores de Cristo eram conhecidos como "Seguidores do Caminho", pois acreditavam que Jesus é o único caminho para a salvação. Quer saber mais sobre essa história e o porquê do nosso nome?
+              Os primeiros seguidores de Cristo eram conhecidos como "Seguidores do Caminho", pois acreditavam que Jesus é o único caminho para a salvação. Quer saber mais sobre essa história e o <Link href="/o-caminho" className="text-accent underline hover:text-accent/80">porquê do nosso nome?</Link>
           </p>
       </div>
-      <Link href="/o-caminho">
-        <ShinyButton>Saiba mais sobre nosso nome</ShinyButton>
-      </Link>
     </div>
   );
 }
