@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { HyperText } from '@/components/ui/hyper-text';
 import { InteractiveHoverButton } from '@/components/ui/interactive-hover-button';
+import { WordRotate } from '@/components/ui/word-rotate';
 
 export function HeroSection() {
   const [isMounted, setIsMounted] = useState(false);
@@ -33,16 +34,19 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-background/70 bg-gradient-to-t from-background/80 to-transparent" />
       
       <div className={`relative z-10 flex flex-col items-center gap-6 px-4 transition-all duration-1000 ease-out ${isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-        <HyperText 
-          as="h1" 
+        <h1 
           className="font-headline text-4xl font-extrabold tracking-tight md:text-6xl lg:text-7xl text-foreground"
-          startOnView={true}
-          animateOnHover={true}
         >
           Família Caminho
-        </HyperText>
+        </h1>
         <div className={`text-lg md:text-xl lg:text-2xl max-w-3xl text-foreground/90 transition-opacity duration-1000 delay-300 font-bold ${isMounted ? 'opacity-100' : 'opacity-0'}`}>
-          <p>Um Lugar de Amor, Fé e Propósito</p>
+          <div className="flex justify-center items-center">
+            <p className="mr-2">Um Lugar de</p>
+            <WordRotate
+                words={["Amor", "Fé", "Propósito"]}
+                className="text-foreground"
+            />
+          </div>
           <p className="mt-2">Uma família para Deus, corpo para Cristo e um templo para o Espírito.</p>
         </div>
         <div className={`flex flex-col sm:flex-row gap-4 mt-4 transition-opacity duration-1000 delay-500 ${isMounted ? 'opacity-100' : 'opacity-0'}`}>
