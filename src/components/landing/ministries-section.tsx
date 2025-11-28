@@ -21,9 +21,9 @@ const MinistryCard = ({ id, name }: { id: string; name: string }) => {
   const image = PlaceHolderImages.find(img => img.id === id);
   return (
     <div className="mx-4">
-      <Card className="overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 w-80">
+      <Card className="overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 w-64">
         <CardContent className="p-0">
-          <div className="relative h-96 w-full">
+          <div className="relative h-80 w-full">
             {image && (
               <Image
                 src={image.imageUrl}
@@ -35,7 +35,7 @@ const MinistryCard = ({ id, name }: { id: string; name: string }) => {
               />
             )}
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-            <h3 className="font-headline absolute bottom-4 left-4 text-2xl font-bold text-white">
+            <h3 className="font-headline absolute bottom-4 left-4 text-xl font-bold text-white">
               {name}
             </h3>
           </div>
