@@ -1,10 +1,18 @@
+
 "use client";
 
 import Image from 'next/image';
 import { Card, CardContent } from "@/components/ui/card";
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { ScrollVelocityContainer, ScrollVelocityRow } from '@/components/ui/scroll-based-velocity';
-import { useIsMobile } from '@/hooks/use-mobile';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+
 
 const ministries = [
   { id: 'ministry-infantil', name: 'Ministério Infantil' },
@@ -15,13 +23,10 @@ const ministries = [
   { id: 'ministry-discipulado', name: 'Discipulado' },
 ];
 
-const firstRow = ministries.slice(0, 3);
-const secondRow = ministries.slice(3, 6);
-
 const MinistryCard = ({ id, name }: { id: string; name: string }) => {
   const image = PlaceHolderImages.find(img => img.id === id);
   return (
-    <Card className="overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 w-56 md:w-60">
+    <Card className="overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
       <CardContent className="p-0">
         <div className="relative h-72 w-full">
           {image && (
@@ -31,7 +36,7 @@ const MinistryCard = ({ id, name }: { id: string; name: string }) => {
               fill
               className="object-cover transition-transform duration-300 group-hover:scale-105"
               data-ai-hint={image.imageHint}
-              sizes="(max-width: 768px) 50vw, 33vw"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -45,8 +50,6 @@ const MinistryCard = ({ id, name }: { id: string; name: string }) => {
 };
 
 export function MinistriesSection() {
-  const isMobile = useIsMobile();
-
   return (
     <div className="space-y-12">
       <div className="text-center space-y-4">
@@ -56,32 +59,31 @@ export function MinistriesSection() {
         </p>
       </div>
 
-      {isMobile ? (
-         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {ministries.map((ministry) => (
-                <div key={ministry.id} className="mx-auto">
-                    <MinistryCard {...ministry} />
-                </div>
-            ))}
-        </div>
-      ) : (
-        <div className="relative flex w-full flex-col items-center justify-center overflow-hidden py-4">
-            <ScrollVelocityContainer>
-            <ScrollVelocityRow baseVelocity={-2} direction={-1} className="py-2">
-                {firstRow.map((ministry) => (
-                <div className="mx-2" key={ministry.id}><MinistryCard {...ministry} /></div>
-                ))}
-            </ScrollVelocityRow>
-            <ScrollVelocityRow baseVelocity={2} direction={1} className="py-2">
-                {secondRow.map((ministry) => (
-                <div className="mx-2" key={ministry.id}><MinistryCard {...ministry} /></div>
-                ))}
-            </ScrollVelocityRow>
-            </ScrollVelocityContainer>
-            <div className="from-background pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r"></div>
-            <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l"></div>
-        </div>
-      )}
+       <Carousel
+        opts={{
+          align: "start",
+          loop: true,
+        }}
+        plugins={[
+          Autoplay({
+            delay: 3000,
+            stopOnInteraction: true,
+          }),
+        ]}
+        className="w-full max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto"
+      >
+        <CarouselContent>
+          {ministries.map((ministry) => (
+            <CarouselItem key={ministry.id} className="sm:basis-1/2 lg:basis-1/3">
+              <div className="p-1">
+                <MinistryCard {...ministry} />
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious className="hidden sm:flex" />
+        <CarouselNext className="hidden sm:flex" />
+      </Carousel>
     </div>
   );
 }
