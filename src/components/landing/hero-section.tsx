@@ -35,6 +35,7 @@ export function HeroSection() {
       <div className={`relative z-10 flex flex-col items-center gap-6 px-4 transition-all duration-1000 ease-out ${isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <TypingAnimation 
           className="font-headline text-4xl font-extrabold tracking-tight md:text-6xl lg:text-7xl text-foreground"
+          loop={false}
         >
           Família Caminho
         </TypingAnimation>
