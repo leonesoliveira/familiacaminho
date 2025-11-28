@@ -156,7 +156,7 @@ export function ContactSection() {
             <div className="space-y-4 text-left">
                 <div className="flex items-center gap-4">
                     <Mail className="h-6 w-6 text-accent"/>
-                    <a href="mailto:contato@familiacaminho.com" className="text-muted-foreground font-bold hover:text-primary">contato@familiacaminho.com</a>
+                    <a href="mailto:igreja.familiacaminho@gmail.com" className="text-muted-foreground font-bold hover:text-primary">contato@familiacaminho.com</a>
                 </div>
                 <div className="flex items-center gap-4">
                     <Phone className="h-6 w-6 text-accent"/>
