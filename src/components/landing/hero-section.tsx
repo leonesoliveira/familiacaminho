@@ -3,9 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { HyperText } from '@/components/ui/hyper-text';
 import { InteractiveHoverButton } from '@/components/ui/interactive-hover-button';
 import { WordRotate } from '@/components/ui/word-rotate';
 
